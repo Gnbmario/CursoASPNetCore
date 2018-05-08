@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Curso ASP Net Code\\Ambito\\Ambito.csproj",
+      "projectUniqueName": "c:\\CursoAPSNetCore\\Ambito\\Ambito.csproj",
       "projectName": "Ambito",
-      "projectPath": "C:\\Curso ASP Net Code\\Ambito\\Ambito.csproj",
+      "projectPath": "c:\\CursoAPSNetCore\\Ambito\\Ambito.csproj",
       "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-      "outputPath": "C:\\Curso ASP Net Code\\Ambito\\obj\\",
+      "outputPath": "c:\\CursoAPSNetCore\\Ambito\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

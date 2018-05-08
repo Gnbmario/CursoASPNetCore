@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Curso ASP Net Code\\MisClases\\MisClases.csproj",
+      "projectUniqueName": "C:\\CursoAPSNetCore\\MisClases\\MisClases.csproj",
       "projectName": "MisClases",
-      "projectPath": "C:\\Curso ASP Net Code\\MisClases\\MisClases.csproj",
+      "projectPath": "C:\\CursoAPSNetCore\\MisClases\\MisClases.csproj",
       "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-      "outputPath": "C:\\Curso ASP Net Code\\MisClases\\obj\\",
+      "outputPath": "C:\\CursoAPSNetCore\\MisClases\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

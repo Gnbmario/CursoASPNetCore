@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Curso ASP Net Code\\tipos\\tipos.csproj",
+      "projectUniqueName": "c:\\CursoAPSNetCore\\tipos\\tipos.csproj",
       "projectName": "tipos",
-      "projectPath": "C:\\Curso ASP Net Code\\tipos\\tipos.csproj",
+      "projectPath": "c:\\CursoAPSNetCore\\tipos\\tipos.csproj",
       "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-      "outputPath": "C:\\Curso ASP Net Code\\tipos\\obj\\",
+      "outputPath": "c:\\CursoAPSNetCore\\tipos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
