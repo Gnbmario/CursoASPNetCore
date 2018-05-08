@@ -1,0 +1,11 @@
+C:\CursoAPSNetCore\Excepciones\bin\Debug\netcoreapp2.0\Excepciones.deps.json
+C:\CursoAPSNetCore\Excepciones\bin\Debug\netcoreapp2.0\Excepciones.runtimeconfig.json
+C:\CursoAPSNetCore\Excepciones\bin\Debug\netcoreapp2.0\Excepciones.runtimeconfig.dev.json
+C:\CursoAPSNetCore\Excepciones\bin\Debug\netcoreapp2.0\Excepciones.dll
+C:\CursoAPSNetCore\Excepciones\bin\Debug\netcoreapp2.0\Excepciones.pdb
+C:\CursoAPSNetCore\Excepciones\obj\Debug\netcoreapp2.0\Excepciones.csprojAssemblyReference.cache
+C:\CursoAPSNetCore\Excepciones\obj\Debug\netcoreapp2.0\Excepciones.csproj.CoreCompileInputs.cache
+C:\CursoAPSNetCore\Excepciones\obj\Debug\netcoreapp2.0\Excepciones.AssemblyInfoInputs.cache
+C:\CursoAPSNetCore\Excepciones\obj\Debug\netcoreapp2.0\Excepciones.AssemblyInfo.cs
+C:\CursoAPSNetCore\Excepciones\obj\Debug\netcoreapp2.0\Excepciones.dll
+C:\CursoAPSNetCore\Excepciones\obj\Debug\netcoreapp2.0\Excepciones.pdb
