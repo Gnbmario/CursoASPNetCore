@@ -7,7 +7,10 @@ namespace Acoplamiento
     {
         static void Main(string[] args)
         {
-            var service = new OrdersService(new OrdersRepository());
+            IOrdersRepository repository = new OrdersFromAPIRepository();
+
+            var service = new OrdersService(repository);
+
             var pedidos = service.GetOrders();
             
             foreach (var pedido in pedidos)
@@ -20,8 +23,8 @@ namespace Acoplamiento
 
     public class OrdersService
     {
-        OrdersRepository _ordersRepository;
-        public OrdersService(OrdersRepository repository)
+        IOrdersRepository _ordersRepository;
+        public OrdersService(IOrdersRepository repository)
         {
             _ordersRepository= new OrdersRepository();
         }
@@ -38,8 +41,8 @@ namespace Acoplamiento
     {
         List<string> GetOrdersFromDB();
     }
-    
-    public class OrdersRepository
+
+    public class OrdersRepository: IOrdersRepository
     {
         public List<string> GetOrdersFromDB()
         {
@@ -50,6 +53,21 @@ namespace Acoplamiento
                 "Pedido 3",
             };
             return orders;
+        }
+    }
+
+    public class OrdersFromAPIRepository : IOrdersRepository
+    {
+        public List<string> GetOrdersFromDB()
+        {
+            var orders= new List<string>()
+            {
+                "Pedido desde api 1",
+                "Pedido desde api 2",
+                "Pedido desde api 3",
+            };
+            return orders;
+            // No da pedido desde api, habrá algo mal de ordersfromapi
         }
     }
 }
