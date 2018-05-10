@@ -21,14 +21,41 @@ namespace MiAPI.Controllers
         }
 
         [HttpGet]
-        public IList<TodoList> GetLists()
+        public IList<TodoList> GetLists(int id)
         {
             return _service.GetTodoLists();
         }
 
-        public TodoList GetList(int id)
+        [HttpGet("{id:int}")]
+        public IActionResult GetList(int id)
         {
-            return _service.GetTodoList(id);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (!_service.ExistList(id))
+                return NotFound(new { info = "No existe ninguna lista con el id especificado" });
+
+            var result= _service.GetTodoList(id);
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public IActionResult PostTodoList([FromBody]TodoList list)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            int createdId;
+            try
+            {
+                 createdId = _service.CreateList(list);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+
+            return CreatedAtAction("PostTodoList", new { id = createdId }, list);
         }
     }
 }
