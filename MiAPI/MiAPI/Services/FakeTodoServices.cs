@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MiAPI.Services
 {
-    public class FakeTodoServices
+
+    public interface ITodoService
+    {
+       IList<TodoList> GetTodoLists();
+    }
+
+    public class FakeTodoServices : ITodoService
     {
         public FakeTodoServices() { }
 
