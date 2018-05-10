@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -23,6 +24,8 @@ namespace MiAPI.Models
         public bool Done { get; set; }
 
         public int TodoListId { get; set; }
+
+        [JsonIgnore]
         public TodoList TodoList { get; set; }
     }
 }

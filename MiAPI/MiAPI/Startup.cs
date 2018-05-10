@@ -31,7 +31,7 @@ namespace MiAPI
                 options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
                 );
 
-            services.AddTransient<ITodoService, FakeTodoServices>();
+            services.AddTransient<ITodoService, TodoService>();
 
             services.AddMvc();
         }
