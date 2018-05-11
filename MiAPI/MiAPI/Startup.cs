@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using MiAPI.Custome;
 using MiAPI.Persistence;
 using MiAPI.Services;
 using Microsoft.AspNetCore.Builder;
@@ -65,7 +66,10 @@ namespace MiAPI
                 logger.LogInformation(logString);
             });
 
+
+            app.UseMiddleware<SimpleProfilerMiddleware>();
             app.UseMvc();
+
         }
     }
 }
