@@ -30,7 +30,6 @@ namespace MiAPI.Custome
 
             _logger.LogInformation(logString);
         }
-
     }
 
 }
