@@ -47,5 +47,25 @@ namespace MiAPI.Services
             return list.Id;
 
         }
+
+        public void UpdateList(TodoList list)
+        {
+            _context.Entry(list).State = EntityState.Modified;
+
+            foreach (var item in list.Items)
+            {
+                _context.Entry(item).State = EntityState.Modified;
+            }
+
+            _context.SaveChanges();
+        }
+
+        public void DeleteList(int id)
+        {
+            var list = _context.TodoLists.Find(id);
+            _context.TodoLists.Remove(list);
+
+            _context.SaveChanges();
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace MiAPI.Controllers
     public class TodoController : Controller
     {
         ITodoService _service;
+        private const string NotFoundMessage = "No existe ninguna lista con el id especificado";
 
         public TodoController(ITodoService service)
         {
@@ -31,6 +32,7 @@ namespace MiAPI.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+
 
             if (!_service.ExistList(id))
                 return NotFound(new { info = "No existe ninguna lista con el id especificado" });
@@ -56,6 +58,33 @@ namespace MiAPI.Controllers
             }
 
             return CreatedAtAction("PostTodoList", new { id = createdId }, list);
+        }
+
+        [HttpPut("{id:int}")]
+        public IActionResult PutTodoList(int id,[FromBody] TodoList list)
+        {
+            // || OR
+            // && AND
+            if (!ModelState.IsValid || id <=0)
+                return BadRequest(ModelState);
+
+            _service.UpdateList(list);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteTodoList(int id)
+        {
+            if (id <= 0)
+                return BadRequest();
+
+            if (!_service.ExistList(id))
+                return NotFound(new { info = NotFoundMessage });
+
+            _service.DeleteList(id);
+
+                return Ok();
         }
     }
 }
